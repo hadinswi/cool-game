@@ -78,14 +78,7 @@ func apply_gravity(delta):
 	velocity.y = min(velocity.y, max_fall_velocity)
 
 
-# Connect this signal in the editor to the script where the player is controlled.
-func _ready():
-	$Area2D.connect("body_entered", self, "_on_area_entered")
 
-func _on_area_entered(body):
-	if body.name == "Player":
-		# Reset the player's position to the starting point
-		position = Vector2(100, 100)  # Change this to your starting position
 
 
 func _on_Area2D_body_entered(body):
